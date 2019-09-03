@@ -14,8 +14,13 @@ func main() {
 
 	fmt.Println("Lotter system")
 	i := 5
-	ip := "http://localhost:8080"
-
+	var hostname,portNumber string
+	fmt.Println("enter server ip ")
+	fmt.Scanln(&hostname)
+	fmt.Println("enter port number")
+	fmt.Scanln(&portNumber)
+	ip := "http://"+ hostname +":"+ portNumber
+	fmt.Println("ip is:",ip)
 	for {
 		fmt.Println("1.Create New Ticket")
 		fmt.Println("2.Return list of tickets")
