@@ -21,7 +21,7 @@ func OpenLoggerFile() (func() *os.File, error) {
 	}
 	fileHandle, err = os.OpenFile(logPATH+logFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
-		fmt.Println("Logger File Cannot Open. Program should not run Without logging.")
+		fmt.Println("Logger File Cannot Open. Program should not run Without logging. err:", err)
 		return nil, err
 	}
 	log.Init(fileHandle, fileHandle, fileHandle, fileHandle)

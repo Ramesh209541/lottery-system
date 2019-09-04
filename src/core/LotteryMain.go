@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	dataBaseFile = "./nraboy.db"
+	dataBaseFile = "./LotteryTickets.db"
 	configFile   = "config/conf.json"
 )
 
